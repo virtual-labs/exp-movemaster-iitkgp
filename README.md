@@ -1,9 +1,10 @@
 ## Introduction
 
-
-<b>Discipline | <b> **Mechanical Engineering**:--|:--|
+![IIT KGP Logo](images/iit-kharagpur-logo.png)
+<b>Discipline | <b> Mechanical Engineering :--|:--|
 <b> Lab | <b> **Mechanisms and Robotics Lab**
 <b> Experiment|     <b> **Movemaster and Experiment 1**
+<b>Webpage| <b> [http://facweb.iitkgp.ernet.in/~cskumar/](http://facweb.iitkgp.ernet.in/~cskumar/)
 
 ### About the Experiment 
 
@@ -17,7 +18,8 @@
 
 ### Contributors List
 
-SrNo | Name | Faculty or Student or VLabs Staff | Designation | Department| Institute
+SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | **Ujjal Dey** | VLabs Staff | Junior Research Fellow | Department of Mechanical Engineering | IIT Kharagpur | 
-2 | **Aditya Kameswara Rao Nandula** | VLabs Staff | Senior Project Officer | Department of Mechanical Engineering | IIT Kharagpur | 
+1 | **Ujjal Dey** | Developer | Junior Research Fellow | Department of Mechanical Engineering | IIT Kharagpur | 
+2 | **Pabitra Kumar Jana** | Integration | Senior Project Officer | Department of Mechanical Engineering | IIT Kharagpur | 
+2 | **Aditya Kameswara Rao Nandula** | Integration | Senior Project Officer | Department of Mechanical Engineering | IIT Kharagpur | 
