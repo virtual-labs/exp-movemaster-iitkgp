@@ -1,13 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+    <head>
+        <script src="../js/mathjs/math.js"></script>
+        <script src="../js/mathjs/math.min.js"></script>
+        <script src="../js/plotly-latest.min.js"></script>
+        <script src="../js/MathJax.js"></script>
+		<script src="../js/jquery/jquery-3.5.0.js"></script>
+        <script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
+        <!-- Google Analytics Script -->
+        <script src="../js/google-analytics.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+        <script type="text/javascript" src="../js/threejs/three.min.js"></script>
+        <script type="text/javascript" src="../js/threejs/TrackballControls.js"></script>
+        <script type="text/javascript" src="../js/threejs/Detector.js"></script>
+        <script type="text/javascript" src="../js/threejs/stats.min.js"></script> 
+
+
+        <script type="text/javascript" src="./js/axis.js"></script>
+        <script type="text/javascript" src="./js/MOVEMASTER_scene.js"></script>
+        <script type="text/javascript" src="./js/MOVEMASTER_controller.js"></script>
+        <script src="./js/MOVEMASTER_tmat.js" type="text/javascript"></script> 
+		<script src="./js/graph.js" type="text/javascript"></script>
+
+    </head>
+    <body onload="myFunction()">
+        <center>
+        <div class="logo" id="experiment-header-logo">
+            <img src="../images/logo.jpg" style="width:1320px; height:130px">
+        </div>
+        <div id="main-wrapper">
+            <div id="input-wrapper" >
+                <div id="input-title">Input Panel</div>     
+<br>				
+                <div id="input-view">
+                    <div id="column1">
+                        <fieldset>
+                            <legend><b>Input Joint Values</b></legend>
+                            <p id="jrv-msg" style="color: red; "></p>
+                            <center><table border="1">
+                                <tr><td width="30"><b>`theta_1`</b></td>  <td><input type="text" name="size1" size="2"  value="0" id="th1"></td></tr>
+                                <tr><td><b>`theta_2`</b></td> <td><input type="text" name="size2" size="2"  value="-45" id="th2"></td></tr>
+                                <tr><td><b>`theta_3`</b></td> <td><input type="text" name="size3" size="2"  value="-45" id="th3"></td></tr>
+                                <tr><td><b>`theta_4`</b></td> <td><input type="text" name="size4" size="2"  value="0" id="th4"></td></tr>
+                                <tr><td><b>`theta_5`</b></td> <td><input type="text" name="size5" size="2"  value="0" id="th5"></td></tr>
+                                <tr><td colspan ="6"  align = "center"><input type="button" value="OK" onclick="myFunction()"></td></tr>
+                            </table> </center><br>
+                        </fieldset><br>
+                        <fieldset>
+                            <legend><b>Final Transformation Matrix </b></legend><center>(End-effector position and orientation) </center>
+                            <p id="demo"></p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div id="canvas3d-wrapper">
+                <div id="canvas3d-title">3D Robot Simulator</div>            
+                <div id="canvas3d-view"></div>           
+            </div>
+
+            <div id="controller-graph-wrapper">
+                <div id="controller-wrapper">
+                    <div id="controller-title">Slider-based Robot Joints Controller Panel</div>
+                    <div id="controller-view">
+					<br>
+                        <label style="color: blue" >Waist Joint</label><br>
+                        <input id="slider1" type="range" min="-150" max="150" step="2" value="0" oninput="sliderChange()" style="width:230px">&nbsp;&nbsp;
+                        <input id="rangeValue1" type="text" size="3" value="0"><br>
+                        <label  style="color: blue">Shoulder Joint </label><br>
+                        <input id="slider2" type="range" min="-100" max="30" step="2" value="-45" oninput="sliderChange()" style="width:230px">&nbsp;&nbsp;
+                        <input id="rangeValue2" type="text" size="3" value="0"><br>
+                        <label style="color: blue">Elbow Joint</label><br>
+                        <input id="slider3" type="range"  min="-45" max="45" step="2" value="-45" oninput="sliderChange()" style="width:230px">&nbsp;&nbsp;
+                        <input id="rangeValue3" type="text" size="3" value="0"><br>
+                        <label style="color: blue">Wrist Bend</label><br>
+                        <input id="slider4" type="range" min="-180" max="0" step="2" value="0" oninput="sliderChange()" style="width:230px">&nbsp;&nbsp;
+                        <input id="rangeValue4" type="text" size="3" value="0"><br>
+                        <label style="color: blue">Wrist Roll</label><br>
+                        <input id="slider5" type="range" min="-180" max="180" step="1" value="0" oninput="sliderChange()" style="width:230px">&nbsp;&nbsp;
+                        <input id="rangeValue5" type="text" size="3" value="0"><br><br>
+                         <input id="csv" type="button" value="HOME" onclick="clearslidervalue()" title="Clear the joint values and bring robot to home position">
+						&nbsp;&nbsp; &nbsp;&nbsp;
+                       <input id="workspace" type="button" value="WORKSPACE" onclick="workspace()" title="Click to See Workspace">
+					   &nbsp;&nbsp; &nbsp;&nbsp;
+                       <input id="sv" type="button" value="CLEAR PLOT" onclick="deleteTrace()" title="Delete the graph traces">
+					   <!-- <button  onclick="moveButton()">Click me</button>-->
+                    </div>  
+                </div>
+                <div id="graph-wrapper">
+                    <div id="graph-title">Robot end-effector Position</div>
+                    <div id="graph-view"></div>
+                </div> 
+            </div><!-- End of Controller wrapper-->
+        </div><!-- End of main wrapper-->
+        <footer class="default" id="lab-footer">
+            <!-- Put the content here-->
+            <div style="margin-left:40%; margin-right:40% ">
+                Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+            </div>
+        </footer>
+        </center>
+    </body>
 </html>
