@@ -1,7 +1,7 @@
 ## Introduction
 
 <center>
-<img src="images/iitkgp.png" width="10%">
+<img src="experiment/images/iitkgp.png" width="10%">
 </center>
 <b>Discipline | <b> Mechanical Engineering 
 :--|:--|
