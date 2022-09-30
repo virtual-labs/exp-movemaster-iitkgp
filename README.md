@@ -1,7 +1,9 @@
 ## Introduction
 
-![IIT KGP Logo](images/iit-kharagpur-logo.png)
-<b>Discipline | <b> Mechanical Engineering :--|:--|
+<img src="images/iitkgp.png" width="10%">
+
+<b>Discipline | <b> Mechanical Engineering 
+:--|:--|
 <b> Lab | <b> **Mechanisms and Robotics Lab**
 <b> Experiment|     <b> **Movemaster and Experiment 1**
 <b>Webpage| <b> [http://facweb.iitkgp.ernet.in/~cskumar/](http://facweb.iitkgp.ernet.in/~cskumar/)
