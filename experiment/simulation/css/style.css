@@ -1,0 +1,87 @@
+body{background: background;}
+
+#experiment-header-logo{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#main-wrapper{
+    border-radius: 5px;    
+    background-color: aliceblue;
+    width: 1310px;
+    height: 670px;
+    padding-left: 5px;
+    border: 2px solid navy;
+    margin: 10px;
+}
+#input-wrapper{
+    float: left;
+    width: 400px;
+    // border: solid 1px red;
+}
+#canvas3d-wrapper{
+    display: inline-block;
+    margin:0 auto;    
+    width: 650px;
+    //padding-left: 50px;
+    // border: 2px solid brown;
+}
+#canvas3d-title, #controller-title, #graph-title, #input-title{
+    height: 25px;
+    color: #638EA8;
+	//float: center-left;
+    background-color: #E7EAED;    
+    border-top: 2px #85A8C2 solid;
+    border-right: 2px #85A8C2 solid;
+    border-bottom: 2px #85A8C2 solid;
+    border-left: 2px #85A8C2 solid;    
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 60px;
+	padding-top: 5px;
+}
+#canvas3d-view{
+    color: #638EA8;
+    height: 540px;   
+    border-top: 1px #85A8C2 solid;
+    border-right: 1px #85A8C2 solid;
+    border-bottom: 1px #85A8C2 solid;
+    border-left: 1px #85A8C2 solid; 
+}
+#controller-graph-wrapper{
+    float: right;
+    padding-right: 5px;
+    width: 390px;
+}
+#controller-wrapper{
+}
+#graph-wrapper{
+    height: 200px;
+    background-color: #E4EAED;
+}
+#controller-view{
+    height: 280px;
+    // border: solid 1px brown;
+	 padding-left: 15px;
+}
+#graph-view{}
+#input-wrapper{
+    width: 260px;
+    height: 650px;
+    padding-left: 1px;
+
+}
+#puma-560-footer{
+    background-color:  blanchedalmond;
+    text-align: center;
+    height: 20px;
+    width: 1310px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ #myTable, th, td{               
+                border: 1px solid black;            
+            }
+#rangeslider{
+    width: 50%;
+    }
