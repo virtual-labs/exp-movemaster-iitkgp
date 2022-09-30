@@ -1,8 +1,9 @@
 ## Introduction
 
-<center>
+<div align="center">
 <img src="experiment/images/iitkgp.png" width="10%">
-</center>
+</div>
+
 <b>Discipline | <b> Mechanical Engineering 
 :--|:--|
 <b> Lab | <b> **Mechanisms and Robotics Lab**

@@ -1,1 +1,1 @@
-# Forward Kinematics of Movemaster RM-501
+# Forward Kinematics of Movemaster RM-501 <img src="experiment/images/iitkgp.png" width="10%" />
