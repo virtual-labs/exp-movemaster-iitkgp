@@ -8,7 +8,7 @@
 :--|:--|
 <b> Lab | <b> **Mechanisms and Robotics Lab**
 <b> Experiment|     <b> **Movemaster and Experiment 1**
-<b>Webpage| <b> [http://facweb.iitkgp.ernet.in/~cskumar/](http://facweb.iitkgp.ernet.in/~cskumar/)
+
 
 ### About the Experiment 
 
@@ -19,6 +19,8 @@
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
 <b> Email id|     <b>  **kumar@mech.iitkgp.ac.in**
 <b> Department |  **Department of Mechanical Engineering**
+<b>Webpage| <b> [http://facweb.iitkgp.ernet.in/~cskumar/](http://facweb.iitkgp.ernet.in/~cskumar/)
+
 
 ### Contributors List
 
