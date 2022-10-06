@@ -1,1 +1,1 @@
-#  <div class="container"><div class="row"> <div class="col-md-1"> </div><div lass="col-md-10"> Forward Kinematics of Movemaster RM-501  </div> <div class="col-md-1"> <img src="images/iitkgp.png" width="50%" />  </div> </div> </div>
+#  Forward Kinematics of Movemaster RM-501  &nbsp; &nbsp; &nbsp; <img src="images/iitkgp.png" width="3%" />
