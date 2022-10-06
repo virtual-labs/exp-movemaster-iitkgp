@@ -1,1 +1,1 @@
-## Experiment name
+#  <div lass="row">  <div lass="col-md-2">  </div ><div lass="col-md-10"> Forward Kinematics of Movemaster RM-501  </div> <div class="col-md-2"> <img src="images/iitkgp.png" width="3%" />  </div> </div>
