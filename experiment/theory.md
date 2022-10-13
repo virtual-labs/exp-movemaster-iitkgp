@@ -40,19 +40,19 @@ The main components of the RM-501 include the Robot and the Drive Units. Options
 <div align="center">
 
 
-<b>Waist Joint: |	$300 $
+<b>Waist Joint: |	 $$ 300  $$ 
 :--|:--|
-<b>Shoulder Joint : |	$130 $
-<b>Elbow Joint: |	$90 $
-<b>Wrist Bend: |	$\pm 90 $
-<b>Wrist Roll: |	$\pm 180 $
+<b>Shoulder Joint : |	 $$ 130  $$ 
+<b>Elbow Joint: |	 $$ 90  $$ 
+<b>Wrist Bend: |	 $$ \pm 90  $$ 
+<b>Wrist Roll: |	 $$ \pm 180  $$ 
 
 </div>
 
 
 ### Robot Kinematics:
 
-Robot kinematics involves computing the end effector's position from the joint angles and vice versa for controlling the position of robot. The Mitsubishi RM-501 robot has 5 degrees of freedom (Figure 2) and the ability to grip with its two fingers. Its position can be described by the vector of joint coordinates $q = [q_1\quad  q_2\quad  q_3\quad  q_4\quad  q_5]^T$ and the vector of external coordinates $r = [ x\quad y\quad z\quad \phi \quad \psi ]^T$. Figure 3 shows the robots arm with its basic dimensions, from which the kinematics can be derived, i.e. the link between the $q$ and $r$ vectors.
+Robot kinematics involves computing the end effector's position from the joint angles and vice versa for controlling the position of robot. The Mitsubishi RM-501 robot has 5 degrees of freedom (Figure 2) and the ability to grip with its two fingers. Its position can be described by the vector of joint coordinates  $$ q = [q_1\quad  q_2\quad  q_3\quad  q_4\quad  q_5]^T $$  and the vector of external coordinates  $$ r = [ x\quad y\quad z\quad \phi \quad \psi ]^T $$ . Figure 3 shows the robots arm with its basic dimensions, from which the kinematics can be derived, i.e. the link between the  $$ q $$  and  $$ r $$  vectors.
 
 <div align="center">
 <img src="images/robotkinematics.png" />
@@ -75,7 +75,7 @@ $$ A^0_1, A^1_2, A^1_2, ...... A^{n-1}_n $$
 
 </div>
 
-For rotational joints, each matrix will then contain the joint angle $\hat{I}$¸ $n$ as a variable. The overall transformation from the earth fixed reference frame to the end effector fixed reference frame is then given by
+For rotational joints, each matrix will then contain the joint angle  $$ \hat{I} $$¸  $$ n $$  as a variable. The overall transformation from the earth fixed reference frame to the end effector fixed reference frame is then given by
 
 <div align="center">
 
@@ -83,16 +83,16 @@ $$ A^0_n = A^0_1 A^1_2 A^1_2 ...... A^{n-1}_n $$
 
 </div>
 
-For each joint of the robot : $A^{i-1}_i$ the Denavit-Hartenberg matrix contains four parameters that fully define coordinate transformation from the coordinate system attached to the previous link to the coordinate system attached to the next link. The four parameters and a description of their meaning is given in Table
+For each joint of the robot :  $$ A^{i-1}_i $$  the Denavit-Hartenberg matrix contains four parameters that fully define coordinate transformation from the coordinate system attached to the previous link to the coordinate system attached to the next link. The four parameters and a description of their meaning is given in Table
 
 <div align="center">
 
 <b> Parameter | <b> Description
 :--|:--|
- $a_i$ |	The distance between $Z_{i-1}$ to $Z_i$ measured along $X_i$ 
- $\alpha_i$ |	The angle between $Z_{i-1}$ and $Z_i$ measured along $X_i$ 
- $d_i$ |	The distance between $X_{i-1}$ to $X_i$ measured along $Z_i$ 
- $\theta_i$ |	The angle between $X_{i-1}$ and $X_i$ measured along $Z_i$ 
+  $$ a_i $$  |	The distance between  $$ Z_{i-1} $$  to  $$ Z_i $$  measured along  $$ X_i $$  
+  $$ \alpha_i $$  |	The angle between  $$ Z_{i-1} $$  and  $$ Z_i $$  measured along  $$ X_i $$  
+  $$ d_i $$  |	The distance between  $$ X_{i-1} $$  to  $$ X_i $$  measured along  $$ Z_i $$  
+  $$ \theta_i $$  |	The angle between  $$ X_{i-1} $$  and  $$ X_i $$  measured along  $$ Z_i $$  
 
 </div>
 
@@ -107,13 +107,13 @@ The Denavit-Hartenberg parameters derived for the Mitsubishi Movemaster RM-501 i
 
 <div align="center">
 
-$i$ | $a_i$ | $\alpha_i$ | $d_i$ | $\theta_i$ | <b> Home
+ $$ i $$  |  $$ a_i $$  |  $$ \alpha_i $$  |  $$ d_i $$  |  $$ \theta_i $$  | <b> Home
 :--|:--|:--|:--|:--|:--|
-$1$ | $0$ | $-90^o$ | $250$ | $\theta_i$ | $0^o$
-$2$ | $220$ | $0^o$ | $0$ | $\theta_i$ | $-90^o$
-$3$ | $160$ | $0^o$ | $0$ | $\theta_i$ | $90^o$
- $4$ | $0$ | $-90^o$ | $0$ | $\theta_i$ | $0^o$
- $5$ | $0$ | $0^o$ | $215$ | $\theta_i$ | $-90^o$
+ $$ 1 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 250 $$  |  $$ \theta_i $$  |  $$ 0^o $$ 
+ $$ 2 $$  |  $$ 220 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ -90^o $$ 
+ $$ 3 $$  |  $$ 160 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ 90^o $$ 
+  $$ 4 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ 0^o $$ 
+  $$ 5 $$  |  $$ 0 $$  |  $$ 0^o $$  |  $$ 215 $$  |  $$ \theta_i $$  |  $$ -90^o  $$  $$  
 
 </div>
 
