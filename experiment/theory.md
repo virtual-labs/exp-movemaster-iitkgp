@@ -8,9 +8,9 @@ The essential concept of forward kinematic animation is that the positions of pa
 
 
 <div align="center">
-  <img src="images/rm501.jpg" ><br>
+  <img src="images/rm501.jpg" />
   
-***Figure 1: MOVEMASTER RM-501***
+***Figure 1: Movemaster RM-501***
 </div>
 
 ## Theory
@@ -28,9 +28,9 @@ The Robot Unit, including the base, weighs approximately 27 kg. The overall size
 In addition to the robot itself, the complete robotic system for the Mitsubishi Movemaster consists of several components, which are shown in the following Figure 2:
 
 <div align="center">
-<img src="images/mm-sketch.png">
+<img src="images/mm-sketch.png" />
 
-***Figure 2: Movemaster RM501 components***
+***Figure 2: Movemaster RM 501 components***
 </div>
 
 The main components of the RM-501 include the Robot and the Drive Units. Options include the Teaching Box and the standard hand. The RM-501 drive unit provides the intelligence and control for the robot unit. The Drive Unit computes all arm control information for each instruction. It handles arm velocity, acceleration, deceleration and movement trajectories for the user. The Teaching Box allows a user to manually move all joints of the Robot Unit and store positions as desired. The Drive Unit is interfaced to the Computer host processor via a controller interface.
@@ -52,7 +52,7 @@ The main components of the RM-501 include the Robot and the Drive Units. Options
 
 ### Robot Kinematics:
 
-Robot kinematics involves computing the end effector's position from the joint angles and vice versa for controlling the position of robot. The Mitsubishi RM-501 robot has 5 degrees of freedom (Figure 2) and the ability to grip with its two fingers. Its position can be described by the vector of joint coordinates  $ q = [q_1\quad  q_2\quad  q_3\quad  q_4\quad  q_5]^T $  and the vector of external coordinates  $ r = [ x\quad y\quad z\quad \phi \quad \psi ]^T $ . Figure 3 shows the robots arm with its basic dimensions, from which the kinematics can be derived, i.e. the link between the  $ q $  and  $ r $  vectors.
+Robot kinematics involves computing the end effector's position from the joint angles and vice versa for controlling the position of robot. The Mitsubishi RM-501 robot has 5 degrees of freedom (Figure 2) and the ability to grip with its two fingers. Its position can be described by the vector of joint coordinates  \( q = [q_1\quad  q_2\quad  q_3\quad  q_4\quad  q_5]^T \)  and the vector of external coordinates \(  r = [ x\quad y\quad z\quad \phi \quad \psi ]^T  \)   . Figure 3 shows the robots arm with its basic dimensions, from which the kinematics can be derived, i.e. the link between the \(  q  \)    and \(  r  \)    vectors.
 
 <div align="center">
 <img src="images/robotkinematics.png" />
@@ -75,7 +75,7 @@ $$ A^0_1, A^1_2, A^1_2, ...... A^{n-1}_n $$
 
 </div>
 
-For rotational joints, each matrix will then contain the joint angle  $ \hat{I} $¸  $ n $  as a variable. The overall transformation from the earth fixed reference frame to the end effector fixed reference frame is then given by
+For rotational joints, each matrix will then contain the joint angle \(  \hat{I} \)¸ \(  n  \)    as a variable. The overall transformation from the earth fixed reference frame to the end effector fixed reference frame is then given by
 
 <div align="center">
 
@@ -83,16 +83,16 @@ $$ A^0_n = A^0_1 A^1_2 A^1_2 ...... A^{n-1}_n $$
 
 </div>
 
-For each joint of the robot :  $ A^{i-1}_i $  the Denavit-Hartenberg matrix contains four parameters that fully define coordinate transformation from the coordinate system attached to the previous link to the coordinate system attached to the next link. The four parameters and a description of their meaning is given in Table
+For each joint of the robot : \(  A^{i-1}_i  \)    the Denavit-Hartenberg matrix contains four parameters that fully define coordinate transformation from the coordinate system attached to the previous link to the coordinate system attached to the next link. The four parameters and a description of their meaning is given in Table
 
 <div align="center">
 
 <b> Parameter | <b> Description
 :--|:--|
-  $$ a_i $$  |	The distance between  $$ Z_{i-1} $$  to  $$ Z_i $$  measured along  $$ X_i $$  
-  $$ \alpha_i $$  |	The angle between  $$ Z_{i-1} $$  and  $$ Z_i $$  measured along  $$ X_i $$  
-  $$ d_i $$  |	The distance between  $$ X_{i-1} $$  to  $$ X_i $$  measured along  $$ Z_i $$  
-  $$ \theta_i $$  |	The angle between  $$ X_{i-1} $$  and  $$ X_i $$  measured along  $$ Z_i $$  
+  $$ a_i $$  |	The distance between  \( Z_{i-1} \)  to  \(  Z_i \)  measured along  \(  X_i \)  
+  $$ \alpha_i $$  |	The angle between  \(  Z_{i-1} \)  and  \(  Z_i \)  measured along  \(  X_i \)  
+  $$ d_i $$  |	The distance between  \(  X_{i-1} \)  to  \(  X_i \)  measured along  \(  Z_i \)  
+  $$ \theta_i $$  |	The angle between  \(  X_{i-1} \)  and  \(  X_i \)  measured along  \(  Z_i \)  
 
 </div>
 
@@ -109,28 +109,42 @@ The Denavit-Hartenberg parameters derived for the Mitsubishi Movemaster RM-501 i
 
  $$ i $$  |  $$ a_i $$  |  $$ \alpha_i $$  |  $$ d_i $$  |  $$ \theta_i $$  | <b> Home
 :--|:--|:--|:--|:--|:--|
- $$ 1 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 250 $$  |  $$ \theta_i $$  |  $$ 0^o $$ 
- $$ 2 $$  |  $$ 220 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ -90^o $$ 
- $$ 3 $$  |  $$ 160 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ 90^o $$ 
-  $$ 4 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 0 $$  |  $$ \theta_i $$  |  $$ 0^o $$ 
-  $$ 5 $$  |  $$ 0 $$  |  $$ 0^o $$  |  $$ 215 $$  |  $$ \theta_i $$  |  $$ -90^o  $$  $$  
+ $$ 1 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 250 $$  |  $$ \theta_{waist} $$  |  $$ 0^o $$ 
+ $$ 2 $$  |  $$ 220 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_{shoulder} $$  |  $$ -90^o $$ 
+ $$ 3 $$  |  $$ 160 $$  |  $$ 0^o $$  |  $$ 0 $$  |  $$ \theta_{elbow} $$  |  $$ 90^o $$ 
+  $$ 4 $$  |  $$ 0 $$  |  $$ -90^o $$  |  $$ 0 $$  |  $$ \theta_{wristpitch} $$  |  $$ 0^o $$ 
+  $$ 5 $$  |  $$ 0 $$  |  $$ 0^o $$  |  $$ 215 $$  |  $$ \theta_{wristroll} $$  |  $$ -90^o  $$
 
 </div>
 
 <div align="center">
-<img src="images/13g.png" >
-
+<img src="images/13g.png" />
 </div>
 
 <div align="center">
-<img src="images/13h.png" >
+From Schilling (1990) the arm matrix can be derived by analogy to general arm matrix for five axes articulated robots.
+
+$$
+  T_{base}^(tool)=\begin{bmatrix}
+    C_1C_{234}C_5+S_1S_5 & -C_1C_{234}S_5+S_1C_5 & -C_1S_{234} & C_1(a_2C_2+a_3C_{23}-d_5S_{234}) \\
+    S_1C_{234}C_5-C_1S_5 & -S1C_{234}S_5-C_1C_5 & -S_1S_{234} & S_1(a_2C_2+a_3C_{23}-d_5S_{234}) \\
+    -S_{234}C_5 & S_{234}S_5 & -C_{234} & d_1-a_2S_2-a_3S_{23}-d_5C_{234} \\
+    0 & 0 & 0 & 1
+  \end{bmatrix}
+$$
 
 </div>
 
-This matrix can be understood as being composed of a vector p defining the position the end effector in space, and a 3 by 3 matrix R defining the orientation of the end effector:
+This matrix can be understood as being composed of a vector ***P*** defining the position the end effector in space, and a 3 by 3 matrix ***R*** defining the orientation of the end effector:
 
 <div align="center">
-<img src="images/13i.png" >
-
+$$
+  T_{base}^(tool)=\begin{bmatrix}
+    R_{11} & R_{12} & R_{13} & p_1 \\
+    R_{21} & R_{22} & R_{23} & p_2 \\
+    R_{31} & R_{32} & R_{33} & p_3 \\
+    0 & 0 & 0 & 1
+  \end{bmatrix}
+$$
 </div>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
