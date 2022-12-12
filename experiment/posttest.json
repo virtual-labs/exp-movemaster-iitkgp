@@ -9,12 +9,6 @@
         "c": "3",
         "d": "1"
       },
-      "explanations": {
-        "a": "You have choosen option (a). The answer is correct",
-        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
-        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
-        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
-      },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -26,28 +20,16 @@
         "c": "563.377 cm",
         "d": "-120.219 cm"
       },
-      "explanations": {
-        "a": "You have choosen option (a). The answer is correct",
-        "b": "You have choosen option (b). The answer is incorrect. The correct option is (a).",
-        "c": "You have choosen option (c). The answer is incorrect. The correct option is (a).",
-        "d": "You have choosen option (d). The answer is incorrect. The correct option is (a)."
-      },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
       "question": "What is the range of wrist Roll?",
       "answers": {
-        "a": " \\pm 90",
-        "b": " \\pm 140 " ,
-        "c": " \\pm 120" ,
-        "d": " \\pm 180 " 
-      },
-      "explanations": {
-        "a": "You have choosen option (a). The answer is incorrect. The correct option is (d).",
-        "b": "You have choosen option (b). The answer is incorrect. The correct option is (d).",
-        "c": "You have choosen option (c). The answer is incorrect. The correct option is (d).",
-        "d": "You have choosen option (d). The answer is correct."
+        "a": " &plusmn; 90",
+        "b": " &plusmn; 140 " ,
+        "c": " &plusmn; 120" ,
+        "d": " &plusmn; 180 " 
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
