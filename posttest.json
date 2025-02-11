@@ -1,0 +1,38 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "How many joints are there in the wrist of the Movemaster RM-501 robot?",
+      "answers": {
+        "a": "2",
+        "b": "4",
+        "c": "3",
+        "d": "1"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the Px positional value of the Movemaster robot in a configuration [60, -45, -47, 0, 0]?",
+      "answers": {
+        "a": "182.282 cm",
+        "b": "320.917 cm",
+        "c": "563.377 cm",
+        "d": "-120.219 cm"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the range of wrist Roll?",
+      "answers": {
+        "a": " &plusmn; 90",
+        "b": " &plusmn; 140 " ,
+        "c": " &plusmn; 120" ,
+        "d": " &plusmn; 180 " 
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
